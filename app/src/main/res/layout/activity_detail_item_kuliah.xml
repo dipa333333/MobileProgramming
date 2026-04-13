@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/_6360239_three_bar_line_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="2401010873 Ananda"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/banner_kewirausahaan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="#1A237E"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/homebtn" /> <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/announcementicon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="PENGUMUMAN"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Tugas pertemuan 1"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="tugas membuat rangkuman ...\nmengenai dasar - dasar Akuntansi"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:background="#E0E0E0">
+
+            <LinearLayout style="@style/TableRowStyle">
+                <TextView style="@style/TableCellLeft" android:text="Status pengajuan" />
+                <TextView style="@style/TableCellRight" android:text="belum dikirim" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/TableRowStyle">
+                <TextView style="@style/TableCellLeft" android:text="Status penilaian" />
+                <TextView style="@style/TableCellRight" android:text="belum dikirim" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/TableRowStyle">
+                <TextView style="@style/TableCellLeft" android:text="Jatuh tempo" />
+                <TextView style="@style/TableCellRight" android:text="kamis, 29 April 2026, 00:00" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/TableRowStyle">
+                <TextView style="@style/TableCellLeft" android:text="Waktu tersisa" />
+                <TextView style="@style/TableCellRight" android:text="29 hari 6 jam" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/TableRowStyle">
+                <TextView style="@style/TableCellLeft" android:text="Terakhir diubah" />
+                <TextView style="@style/TableCellRight" android:text="Kamis, 29 April 2026, 12:00" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/TableRowStyle">
+                <TextView style="@style/TableCellLeft" android:text="Pengiriman berkas" />
+                <TextView style="@style/TableCellRight" android:text="" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/TableRowStyle">
+                <TextView style="@style/TableCellLeft" android:text="Komentar pengumpulan" />
+                <TextView style="@style/TableCellRight" android:text="komentar (0)" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+</ScrollView>
