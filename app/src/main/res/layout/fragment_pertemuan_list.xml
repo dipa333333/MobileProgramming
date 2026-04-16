@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:animateLayoutChanges="true"> <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <ImageView android:id="@+id/btnMenu" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/_6360239_three_bar_line_icon" />
+        <ImageView android:id="@+id/btnBack" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginStart="8dp" android:layout_toEndOf="@id/btnMenu" android:src="@drawable/arrow_back" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="2401010873 Ananda" android:textStyle="bold" />
+    </RelativeLayout>
+
+        <ImageView android:id="@+id/bannerKuliah" android:layout_width="match_parent" android:layout_height="180dp" android:layout_marginTop="20dp" android:scaleType="centerCrop" android:src="@drawable/banner_kewirausahaan" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/announcementicon" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="PENGUMUMAN" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/btnPertemuan1" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/border_biru" android:gravity="center" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/omagaa" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PERTEMUAN 1" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnPertemuan2" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/border_biru" android:gravity="center" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/omagaa" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PERTEMUAN 2" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_preview_baris_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_biru"
+            android:padding="12dp"
+            android:orientation="vertical">
+            <TextView android:id="@+id/tvPreviewTitleBaris1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="#000000" />
+            <LinearLayout android:id="@+id/btnKeHalamanMateri1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/pdf_icon" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Lihat Detail Materi" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/btnPertemuan3" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/border_biru" android:gravity="center" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/omagaa" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PERTEMUAN 3" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnPertemuan4" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/border_biru" android:gravity="center" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/omagaa" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PERTEMUAN 4" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_preview_baris_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_biru"
+            android:padding="12dp"
+            android:orientation="vertical">
+            <TextView android:id="@+id/tvPreviewTitleBaris2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="#000000" />
+            <LinearLayout android:id="@+id/btnKeHalamanMateri2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/pdf_icon" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Lihat Detail Materi" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/btnPertemuan5" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/border_biru" android:gravity="center" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/omagaa" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PERTEMUAN 5" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnPertemuan6" android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_margin="4dp" android:background="@drawable/border_biru" android:gravity="center" android:orientation="vertical" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/omagaa" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PERTEMUAN 6" android:textStyle="bold" android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_preview_baris_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_biru"
+            android:padding="12dp"
+            android:orientation="vertical">
+            <TextView android:id="@+id/tvPreviewTitleBaris3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textColor="#000000" />
+            <LinearLayout android:id="@+id/btnKeHalamanMateri3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal" android:clickable="true" android:focusable="true">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/pdf_icon" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="Lihat Detail Materi" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
