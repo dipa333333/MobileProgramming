@@ -2,7 +2,8 @@ package com.example.tugas;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView; // Import sudah aman
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,22 +19,26 @@ public class DashboardActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dashboard);
 
-        // 1. Logika untuk padding layar agar tidak tertutup Notch/Status Bar
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        }); // Tutup listener Insets di sini
+        });
 
-        // 2. INISIALISASI BANNER (Harus di luar listener insets, tapi tetap dalam onCreate)
-        // Pastikan di activity_dashboard.xml ID-nya adalah "bannerkuliah" (huruf kecil semua)
+        // Banner Matkul klik (Ke DetailKuliahActivity)
         ImageView banner = findViewById(R.id.bannerkuliah);
-
-        // 3. SET KLIK LISTENER
-        if (banner != null) { // Tambahan aman biar nggak crash kalau ID salah
+        if (banner != null) {
             banner.setOnClickListener(v -> {
-                // Pindah ke DetailKuliahActivity
                 Intent intent = new Intent(DashboardActivity.this, DetailKuliahActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        // Tombol Tampilkan Semua klik (Ke MainActivity untuk lihat database)
+        Button btnSemua = findViewById(R.id.btnSemua);
+        if (btnSemua != null) {
+            btnSemua.setOnClickListener(v -> {
+                Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
                 startActivity(intent);
             });
         }

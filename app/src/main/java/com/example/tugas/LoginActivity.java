@@ -3,6 +3,8 @@ package com.example.tugas;
 import android.content.Intent; // Jangan lupa import Intent!
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView; // Jangan lupa import TextView!
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +49,5 @@ public class LoginActivity extends AppCompatActivity {
             // (Opsional) Tutup halaman login agar user gak bisa balik lagi pakai tombol back
             // finish();
         });
-    } // Akhir dari onCreate
+    }
 } // Akhir dari class
