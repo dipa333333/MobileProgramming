@@ -1,98 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#F8FAFC">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="24dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp">
+
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
                 android:src="@drawable/_6360239_three_bar_line_icon" />
-            <TextView
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="2401010873 Ananda"
-                android:textColor="#000000"
-                android:textStyle="bold" />
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2401010873 Ananda"
+                    android:textColor="#334155"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="12dp"/>
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@android:drawable/btn_star_big_on"
+                    android:backgroundTint="#CBD5E1"/>
+            </LinearLayout>
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tv_detail_nama_matkul"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama Mata Kuliah"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#0A1E5E"
-            android:layout_marginTop="16dp" />
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginBottom="32dp">
 
-        <TextView
-            android:id="@+id/tv_detail_deskripsi_tugas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Deskripsi detail tugas kuliah kamu akan muncul di sini..."
-            android:textSize="14sp"
-            android:textColor="#555555"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@android:color/white"
-            android:elevation="2dp"
-            android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KODE MATA KULIAH"
+                    android:textSize="11sp"
+                    android:textColor="#3B82F6"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:layout_marginBottom="8dp"/>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
-                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Kode Matkul" android:textStyle="bold"/>
-                <TextView android:id="@+id/tv_detail_kode_matkul" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="-" />
+                <TextView
+                    android:id="@+id/tv_detail_kode_matkul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IF101"
+                    android:textSize="18sp"
+                    android:textColor="#475569"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="24dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F5F9"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NAMA MATA KULIAH"
+                    android:textSize="11sp"
+                    android:textColor="#3B82F6"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_detail_nama_matkul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile Programming"
+                    android:textSize="26sp"
+                    android:textColor="#0F172A"
+                    android:textStyle="bold"/>
             </LinearLayout>
-
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
-                <TextView android:layout_width="120dp" android:layout_height="wrap_content" android:text="Jatuh tempo" android:textStyle="bold"/>
-                <TextView android:id="@+id/tv_detail_deadline" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="-" />
-            </LinearLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="24dp"
             android:weightSum="2">
 
             <Button
                 android:id="@+id/btn_edit_tugas"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:layout_weight="1"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
                 android:backgroundTint="#F59E0B"
-                android:text="Ubah Tugas"
-                android:textColor="#FFFFFF" />
+                app:cornerRadius="12dp" />
 
             <Button
                 android:id="@+id/btn_hapus_tugas"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:layout_weight="1"
-                android:layout_marginStart="4dp"
-                android:backgroundTint="#DC2626"
-                android:text="Hapus Tugas"
-                android:textColor="#FFFFFF" />
+                android:layout_marginStart="8dp"
+                android:text="Hapus"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#EF4444"
+                app:cornerRadius="12dp" />
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

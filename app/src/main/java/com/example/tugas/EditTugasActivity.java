@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -14,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class EditTugasActivity extends AppCompatActivity {
 
-    private EditText etKode, etNama, etTugas, etDeadline;
+    private EditText etKode, etNama;
     private Button btnSimpanPerubahan;
     private int idTugas;
 
@@ -30,41 +29,32 @@ public class EditTugasActivity extends AppCompatActivity {
             return insets;
         });
 
-        // 1. Inisialisasi
         etKode = findViewById(R.id.et_edit_kode);
         etNama = findViewById(R.id.et_edit_nama);
-        etTugas = findViewById(R.id.et_edit_tugas);
-        etDeadline = findViewById(R.id.et_edit_deadline);
         btnSimpanPerubahan = findViewById(R.id.btn_simpan_perubahan);
 
-        // 2. Tangkap data lama dari Intent dan masukkan ke EditText
         idTugas = getIntent().getIntExtra("ID", -1);
         etKode.setText(getIntent().getStringExtra("KODE"));
         etNama.setText(getIntent().getStringExtra("NAMA"));
-        etTugas.setText(getIntent().getStringExtra("TUGAS"));
-        etDeadline.setText(getIntent().getStringExtra("DEADLINE"));
 
-        // 3. Aksi ketika tombol Simpan Perubahan diklik
         btnSimpanPerubahan.setOnClickListener(v -> {
             String kodeBaru = etKode.getText().toString();
             String namaBaru = etNama.getText().toString();
-            String tugasBaru = etTugas.getText().toString();
-            String deadlineBaru = etDeadline.getText().toString();
 
             if (kodeBaru.isEmpty() || namaBaru.isEmpty()) {
                 Toast.makeText(this, "Kode dan Nama Matkul wajib diisi!", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Jalankan perintah UPDATE ke database
             DBHelper dbHelper = new DBHelper(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            String sql = "UPDATE matkul SET kode_matkul = ?, nama_matkul = ?, tugas = ?, deadline = ? WHERE id = ?";
-            db.execSQL(sql, new Object[]{kodeBaru, namaBaru, tugasBaru, deadlineBaru, idTugas});
+            // UPDATE tanpa tugas dan deadline
+            String sql = "UPDATE matkul SET kode_matkul = ?, nama_matkul = ? WHERE id = ?";
+            db.execSQL(sql, new Object[]{kodeBaru, namaBaru, idTugas});
 
-            Toast.makeText(this, "Tugas berhasil diubah!", Toast.LENGTH_SHORT).show();
-            finish(); // Tutup halaman edit
+            Toast.makeText(this, "Data berhasil diubah!", Toast.LENGTH_SHORT).show();
+            finish();
         });
     }
 }

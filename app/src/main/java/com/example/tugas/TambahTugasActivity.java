@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class TambahTugasActivity extends AppCompatActivity {
 
-    private EditText etKode, etNama, etTugas, etDeadline;
+    private EditText etKode, etNama;
     private Button btnSimpan;
 
     @Override
@@ -29,11 +29,9 @@ public class TambahTugasActivity extends AppCompatActivity {
             return insets;
         });
 
-        // 1. Inisialisasi komponen form
+        // 1. Inisialisasi komponen form (Hanya Kode dan Nama)
         etKode = findViewById(R.id.et_kode_matkul);
         etNama = findViewById(R.id.et_nama_matkul);
-        etTugas = findViewById(R.id.et_tugas);
-        etDeadline = findViewById(R.id.et_deadline);
         btnSimpan = findViewById(R.id.btn_simpan);
 
         // 2. Aksi saat tombol Simpan diklik
@@ -41,8 +39,6 @@ public class TambahTugasActivity extends AppCompatActivity {
             // Ambil teks dari inputan user
             String kode = etKode.getText().toString();
             String nama = etNama.getText().toString();
-            String tugas = etTugas.getText().toString();
-            String deadline = etDeadline.getText().toString();
 
             // Cek apakah ada kolom yang kosong
             if (kode.isEmpty() || nama.isEmpty()) {
@@ -54,11 +50,11 @@ public class TambahTugasActivity extends AppCompatActivity {
             DBHelper dbHelper = new DBHelper(this);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            // Menggunakan teknik bind argument (?) agar lebih aman dari error tanda petik
-            String sql = "INSERT INTO matkul (kode_matkul, nama_matkul, tugas, deadline) VALUES (?, ?, ?, ?)";
-            db.execSQL(sql, new Object[]{kode, nama, tugas, deadline});
+            // Insert HANYA 2 data: kode_matkul dan nama_matkul
+            String sql = "INSERT INTO matkul (kode_matkul, nama_matkul) VALUES (?, ?)";
+            db.execSQL(sql, new Object[]{kode, nama});
 
-            Toast.makeText(this, "Tugas berhasil disimpan!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Mata Kuliah berhasil disimpan!", Toast.LENGTH_SHORT).show();
 
             // 4. Tutup halaman form dan kembali ke halaman sebelumnya (MainActivity)
             finish();

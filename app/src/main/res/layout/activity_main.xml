@@ -1,35 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#F5F5F5">
+    android:padding="24dp"
+    android:background="#F8FAFC">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Daftar Tugas &amp; Matkul"
-        android:textSize="20sp"
+        android:text="Mata Kuliah"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#0A1E5E"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#0F172A"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kelola daftar mata kuliahmu di sini."
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/btn_tambah"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+ Tambah Tugas Baru"
-        android:backgroundTint="#1E3A8A"
+        android:layout_height="56dp"
+        android:text="+ Tambah Matkul Baru"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:backgroundTint="#3B82F6"
+        app:cornerRadius="12dp"
+        android:layout_marginBottom="24dp"/>
 
-    <ListView
-        android:id="@+id/lv"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DAFTAR MATKUL"
+        android:textSize="11sp"
+        android:textColor="#94A3B8"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="#CCCCCC"
-        android:dividerHeight="1dp" />
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:divider="#F1F5F9"
+            android:dividerHeight="1dp"
+            android:scrollbars="none" />
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
